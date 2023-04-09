@@ -1,16 +1,18 @@
 import React from 'react';
-import Header from './components/Header';
-import Main from './components/Main';
+import Favicon from 'react-favicon';
+import logo from './assets/logo.svg';
+import Note from './components/Note';
 import './index.css';
 
-//Version 0.0.100
+//Version 0.0.200
 
 function App() {
   return (
     <>
-      <Header />
-      <Main />
-      <footer>JotType © 2023</footer>
+      <Favicon url={logo} />
+      <h1>Jottype</h1>
+      <p>Version 0.0.001</p>
+      <Note />
     </>
   );
 }
