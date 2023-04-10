@@ -4,7 +4,7 @@ import logo from './assets/logo.svg';
 import Note from './components/Note';
 import './index.css';
 
-//Version 0.0.200
+//Version 0.0.400
 
 function App() {
   return (
