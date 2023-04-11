@@ -1,162 +1,154 @@
 @import url("https://use.typekit.net/xyl5rvo.css");
 
 * {
-  padding: 0;
-  margin: 0;
-  font-family:"zedou";
+    box-sizing: border-box;
+    font-family: zedou;
 }
 
-body {
-  margin: 1em;
-  background-color: #F4F6F5;
+:root {
+    --primary: #F5CB5C;
+    --secondary: #CFDBD5;
+    --danger: crimson;
+    --white: #F4F6F5;
+    --black: #242423;
+    --gray: #DCE4DA;
+    --gray2: #464746;
+    --gray3: #E8EDDF;
 }
 
-.note {
-  display: block;
-  flex-direction: column;
-  justify-content: space-around;
-  position: relative;
-  float: left;
-  padding: 1em;
-  margin: 1em;
-  width: 20vw;
-  background-color: #F4F6F5;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
-}
-
-.note:hover {
-  border-radius: 1em;
-  transform: scale(1.1);
-}
-
-.inputs {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+body, .Note {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 16px;
+  background: url(https://www.toptal.com/designers/subtlepatterns/patterns/lightpaperfibers.png);
 }
 
-label {
-  font-size: clamp(1em, 1.5vw, 1.5em);
-  font-weight: 600;
-  color: #2D3436;
-  padding: 0.5em;
+button {
+    background: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    color: var(--black);
+    transition: all 0.2s ease;
 }
 
-input[placeholder="Enter a note title"] {
-  width: 20%;
-  height: 1em;
-  border: none;
-  border-radius: 0.5em;
-  padding: 0.5em;
-  font-size: clamp(1em, 1.5vw, 1.5em);
-  font-weight: 400;
-  color: #2D3436;
-  background-color: #F4F6F5;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease-in-out;
+button:hover {
+    color: var(--primary);
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.02);
+}
+  
+.Note {
+    display: flex;
 }
 
-input[placeholder="Enter a note title"]:hover {
-  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.5);
+/* Desktop */
+
+.Header {
+    width: 30%;
+    height: 100vh;
+    border-right: 1px solid var(--gray);
 }
 
-input[placeholder="Enter a note title"]:focus {
-  outline: 1px solid #2D3436;
-  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.5);
+.Header-Top {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
 }
 
-input[placeholder='Enter note category'] {
-  width: 20%;
-  height: 1em;
-  border: none;
-  border-radius: 0.5em;
-  padding: 0.5em;
-  font-size: clamp(1em, 1.5vw, 1.5em);
-  font-weight: 400;
-  color: #2D3436;
-  background-color: #F4F6F5;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease-in-out;
+.Header-Notes {
+    height: calc(100vh - 78px);
+    overflow-y: scroll;
 }
 
-input[placeholder='Enter note category']:hover {
-  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.5);
+.Header-Note {
+    padding: 25px;
+    cursor: pointer;
 }
 
-input[placeholder='Enter note category']:focus {
-  outline: 1px solid #2D3436;
-  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.5);
+.Header-Note-Title {
+    display: flex;
+    justify-content: space-between;
 }
 
-input[placeholder="Enter a new note"] {
-  width: 20%;
-  height: 1em;
-  border: none;
-  border-radius: 0.5em;
-  padding: 0.5em;
-  font-size: clamp(1em, 1.5vw, 1.5em);
-  font-weight: 400;
-  color: #2D3436;
-  background-color: #F4F6F5;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease-in-out;
+.Header-Note button {
+    color: crimson;
 }
 
-input[placeholder="Enter a new note"]:hover {
-  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.5);
+.Header-Note p {
+    margin: 10px 0;
 }
 
-input[placeholder="Enter a new note"]:focus {
-  outline: 1px solid #2D3436;
-  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.5);
+.Header-Note small {
+    display: block;
+    color: var(--gray2);
 }
 
-.add-btn {
-  padding-top: 1em;
+.Header-Note:hover {
+    background: var(--gray);
 }
 
-.add-btn button {
-  width: 7em;
-  height: 2em;
-  font-size: clamp(1em, 1.5vw, 1.5em);
-  font-weight: 600;
-  border-radius: 1em;
-  background: none;
-  outline: none;
-  border: 1px solid #2D3436;
-  transition: all 0.3s ease-in-out;
+.Header-Note.active, 
+.Header-Note.active small {
+  background: var(--secondary);
+  color: var(--black);
 }
 
-.add-btn button:hover {
-  background-color: #2D3436;
-  color: #F4F6F5;
-  transform: scale(1.1);
-  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+.Main {
+    width: 70%;
+    height: 100vh;
 }
 
-.delete-btn {
-  padding-top: 1em;
+.Main-Edit, .Main-Note-Preview {
+  height: 50vh;
 }
 
-.delete-btn button {
-  width: 4em;
-  height: 2em;
-  font-size: clamp(0.8rem, 1vw, 1em);
-  font-weight: 600;
-  border-radius: 1em;
-  background: none;
-  outline: none;
-  border: 1px solid #2D3436;
-  transition: all 0.3s ease-in-out;
+.No-Active-Note {
+    width: 70%;
+    height: 100vh;
+    line-height: 100vh;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--gray2);
 }
 
-.delete-btn button:hover {
-  background-color: #F14C4C;
-  color: #F4F6F5;
-  transform: scale(1.1);
-  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+.Main-Edit {
+    padding: 25px;
+}
+
+.Main-Edit input, textarea {
+  display: block;
+  border: 1px solid var(--gray);
+  margin-bottom: 20px;
+  width: 100%;
+  height: calc(50vh - 130px);
+  padding: 10px;
+  resize: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.Main-Edit input {
+    height: 50px;
+    font-size: 2rem;
+}
+
+.Main-Note-Preview {
+    border-top: 1px solid var(--gray);
+    overflow-y: scroll;
+    background: rgba(0, 0, 0, 0.02);
+}
+  
+.preview-title {
+    padding: 25px 25px 0 25px;
+    margin: 0;
+}
+
+.markdown-preview {
+    padding: 0 25px 25px 25px;
+    font-size: 1rem;
+    line-height: 2rem;
 }
