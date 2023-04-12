@@ -45,7 +45,15 @@ const Note = () => {
 
     const getActiveNote = () => {
         return notes.find(({ id }) => id === activeNote);
-    };    
+    };
+
+    const [size, setSize] = useState(16);
+
+    const [bold , setBold] = useState(false);
+
+    const [italic, setItalic] = useState(false);
+
+    const [underline, setUnderline] = useState(false);
 
     return ( 
         <div className='Note'>
@@ -55,8 +63,20 @@ const Note = () => {
                 onDeleteNote={onDeleteNote}
                 activeNote={activeNote}
                 setActiveNote={setActiveNote}
+                setNotes={setNotes}
             />
-            <Main activeNote={getActiveNote()} onUpdateNote={onUpdateNote}/>
+            <Main 
+                activeNote={getActiveNote()} 
+                onUpdateNote={onUpdateNote}
+                size={size}
+                setSize={setSize}
+                bold={bold}
+                setBold={setBold}
+                italic={italic}
+                setItalic={setItalic}
+                underline={underline}
+                setUnderline={setUnderline}
+            />
         </div>
      );
 }

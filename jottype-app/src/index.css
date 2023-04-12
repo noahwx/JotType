@@ -20,7 +20,6 @@ body, .Note {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  font-size: 16px;
   background: url(https://www.toptal.com/designers/subtlepatterns/patterns/lightpaperfibers.png);
 }
 
@@ -55,18 +54,63 @@ button:hover {
 
 .Header-Top {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 25px;
 }
 
+.Header-Top img {
+    width: 4em;
+    height: 4em;
+}
+
+.logo {
+    position: fixed;
+    left: 2em;
+    top: 1em;
+    transition: all 0.2s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.Header-Top label {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 1.3em;
+    top: 5em;
+    font-size: 1.5rem;
+    color: var(--gray2);
+}
+
+.Header-Top input {
+    position: absolute;
+    left: 5em;
+    top: 5em;
+    width: 20%;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid var(--gray);
+    font-size: 1.5rem;
+    font-family: inherit;
+}
+
+.Header-Top button {
+    position: relative;
+    left: 6em;
+}
+
 .Header-Notes {
+    padding-top: 3em;
     height: calc(100vh - 78px);
     overflow-y: scroll;
 }
 
 .Header-Note {
-    padding: 25px;
+    padding: 2em;
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .Header-Note-Title {
@@ -124,7 +168,7 @@ button:hover {
   border: 1px solid var(--gray);
   margin-bottom: 20px;
   width: 100%;
-  height: calc(50vh - 130px);
+  height: calc(45vh - 130px);
   padding: 10px;
   resize: none;
   font-size: inherit;
@@ -151,4 +195,69 @@ button:hover {
     padding: 0 25px 25px 25px;
     font-size: 1rem;
     line-height: 2rem;
+}
+
+.Note-Edit {
+    display: flex;
+    padding: 1em;
+}
+
+.Note-Edit button {
+    padding-left: 1em;
+}
+
+.search {
+    padding: 2em;
+}
+
+.Modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    padding: 1em;
+    border-radius: 0.5em;
+    height: 25vh;
+    width: 25vw;
+} 
+
+.Modal h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--black);
+    padding-bottom: 1em;
+}
+
+.Modal button {
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    font-size: 1rem;
+}
+
+.Modal button:hover {
+    color: crimson;
+}
+
+.Modal div {
+    font-size: 1rem;
+}
+
+.Modal a {
+    margin-bottom: 1em;
+    text-decoration: none;
+    color: var(--black);
+    transition: all 0.2s ease;
+}
+
+.Modal a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.Modal p {
+    padding-top: 0.5em;
+    margin: 0;
+    font-size: 1rem;
 }
