@@ -21,6 +21,12 @@ const Note = () => {
           title: "Untitled Note",
           body: "",
           lastModified: Date.now(),
+          style: {
+            fontSize: "16px",
+            fontWeight: "normal",
+            fontStyle: "normal",
+            textDecoration: "none",
+            },
         };
     
         setNotes([newNote, ...notes]);
@@ -55,6 +61,13 @@ const Note = () => {
 
     const [underline, setUnderline] = useState(false);
 
+    const style = {
+        fontSize: `${size}px`,
+        fontWeight: `${bold ? "bold" : "normal"}`,
+        fontStyle: `${italic ? "italic" : "normal"}`,
+        textDecoration: `${underline ? "underline" : "none"}`,
+    };
+
     return ( 
         <div className='Note'>
             <Header 
@@ -76,6 +89,7 @@ const Note = () => {
                 setItalic={setItalic}
                 underline={underline}
                 setUnderline={setUnderline}
+                style={style}
             />
         </div>
      );
