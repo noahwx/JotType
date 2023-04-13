@@ -75,10 +75,10 @@ const Header = ({
                             <button onClick={(e) => onDeleteNote(id)}>Delete</button>
                         </div>
             
-                        <p>{body && body.substr(0, 100) + "..."}</p>
+                        <p>{body && body.substr(0, 10) + "..."}</p> 
                         <small>
                             Last Modified:{" "}
-                            {new Date(lastModified).toLocaleDateString("en-GB", {
+                            {new Date(lastModified).toLocaleDateString("en-US", {
                             hour: "2-digit",
                             minute: "2-digit",
                             })}

@@ -117,7 +117,6 @@ button:hover {
 .Header-Note {
     padding: 2em;
     cursor: pointer;
-    transition: all 0.2s ease;
 }
 
 .Header-Note-Title {
@@ -136,10 +135,6 @@ button:hover {
 .Header-Note small {
     display: block;
     color: var(--gray2);
-}
-
-.Header-Note:hover {
-    transform: scale(1.05);
 }
 
 .Header-Note.active, 
