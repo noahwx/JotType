@@ -63,6 +63,12 @@ button:hover {
     height: 4em;
 }
 
+.NewNote {
+    position: absolute;
+    bottom: 0.5em;
+    font-size: 1.5rem;
+}
+
 .logo {
     position: fixed;
     left: 2em;
@@ -102,7 +108,8 @@ button:hover {
 }
 
 .Header-Notes {
-    padding-top: 3em;
+    border-top: 1px solid var(--gray);
+    margin-top: 3em;
     height: calc(100vh - 78px);
     overflow-y: scroll;
 }
@@ -132,13 +139,12 @@ button:hover {
 }
 
 .Header-Note:hover {
-    background: var(--gray);
+    transform: scale(1.05);
 }
 
 .Header-Note.active, 
 .Header-Note.active small {
-  background: var(--secondary);
-  color: var(--black);
+    background-color: var(--gray);
 }
 
 .Main {
@@ -168,7 +174,7 @@ button:hover {
   border: 1px solid var(--gray);
   margin-bottom: 20px;
   width: 100%;
-  height: calc(45vh - 130px);
+  height: calc(50vh - 130px);
   padding: 10px;
   resize: none;
   font-size: inherit;
@@ -197,17 +203,13 @@ button:hover {
     line-height: 2rem;
 }
 
-.Note-Edit {
-    display: flex;
-    padding: 1em;
-}
-
-.Note-Edit button {
-    padding-left: 1em;
-}
-
 .search {
     padding: 2em;
+}
+
+.search input {
+    margin-left: 2.3em;
+    width: 18%;
 }
 
 .Modal {

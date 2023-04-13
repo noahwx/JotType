@@ -21,12 +21,6 @@ const Note = () => {
           title: "Untitled Note",
           body: "",
           lastModified: Date.now(),
-          style: {
-            fontSize: "16px",
-            fontWeight: "normal",
-            fontStyle: "normal",
-            textDecoration: "none",
-            },
         };
     
         setNotes([newNote, ...notes]);
@@ -53,21 +47,6 @@ const Note = () => {
         return notes.find(({ id }) => id === activeNote);
     };
 
-    const [size, setSize] = useState(16);
-
-    const [bold , setBold] = useState(false);
-
-    const [italic, setItalic] = useState(false);
-
-    const [underline, setUnderline] = useState(false);
-
-    const style = {
-        fontSize: `${size}px`,
-        fontWeight: `${bold ? "bold" : "normal"}`,
-        fontStyle: `${italic ? "italic" : "normal"}`,
-        textDecoration: `${underline ? "underline" : "none"}`,
-    };
-
     return ( 
         <div className='Note'>
             <Header 
@@ -81,15 +60,6 @@ const Note = () => {
             <Main 
                 activeNote={getActiveNote()} 
                 onUpdateNote={onUpdateNote}
-                size={size}
-                setSize={setSize}
-                bold={bold}
-                setBold={setBold}
-                italic={italic}
-                setItalic={setItalic}
-                underline={underline}
-                setUnderline={setUnderline}
-                style={style}
             />
         </div>
      );

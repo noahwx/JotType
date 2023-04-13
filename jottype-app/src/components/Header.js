@@ -23,7 +23,6 @@ const Header = ({
     }
 
     function afterOpenModal() {
-        // references are now sync'd and can be accessed.
         subtitle.style.color = '';
     }
 
@@ -47,12 +46,12 @@ const Header = ({
                     <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Designed by Noah Fontenette</h2>
                     <div>Check out my site below.</div>
                     <a href="https://noahfontenette.com" target="_blank" rel="noreferrer">noahfontenette.com</a>
-                    <p>Version 2.0.100</p>
+                    <p>Version 3.0.000</p>
                     <button onClick={closeModal}>close</button>
                 </ReactModal>
-                <button onClick={onAddNote}>Create a New Note</button>
+                <button onClick={onAddNote} className='NewNote'>Create a New Note</button>
                 <div className='search'>
-                    <label>Search:</label>
+                    <label>Search Notes:</label>
                     <input 
                         type="text" 
                         placeholder="Search for a note..."
