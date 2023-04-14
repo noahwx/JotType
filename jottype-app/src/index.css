@@ -361,3 +361,44 @@ button:hover {
     margin: 0;
     font-size: 1rem;
 }
+
+.MobileNote {
+    display: none;
+}
+
+.MobileHeader {
+    display: none;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 950px) {
+    .Note {
+        display: none;
+    }
+
+    .MobileNote {
+          display: block;
+    }
+
+    .Themebtn {
+        display: none;
+    }
+
+    .MobileHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .Header-Top {
+        display: block;
+        width: 100%;
+    }
+
+    .No-Active-Note {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+}
