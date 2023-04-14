@@ -11,10 +11,55 @@
     --danger: crimson;
     --white: #F4F6F5;
     --black: #242423;
-    --gray: #DCE4DA;
-    --gray2: #464746;
-    --gray3: #E8EDDF;
+    --gray: #464746;
+    --gray2: #e8eddf;
+    --gray3: #333533;
+    --gray4: #cfdbd5;
 }
+
+.dark {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.dark button {
+    color: var(--white);
+}
+
+.dark input[placeholder="Search for a note..."] {
+    color: var(--white);
+}
+
+.light {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.Themebtn {
+    position: absolute;
+    bottom: 0;
+    right: 0em;
+    padding: 1em;
+    font-size: 1rem;
+    width: 10%;
+    transition: all 0.2s ease;
+    background-color: var(--black);
+    color: var(--white);
+    border-top-left-radius: 2em;
+}
+
+.dark .Themebtn {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+@media (prefers-color-scheme: light) {
+    .light {
+        background-color: var(--white);
+        color: var(--black);
+    }
+}
+  
 
 body, .Note {
   width: 100%;
@@ -31,7 +76,6 @@ button {
     font-size: inherit;
     font-family: inherit;
     cursor: pointer;
-    color: var(--black);
     transition: all 0.2s ease;
 }
 
@@ -73,6 +117,7 @@ button:hover {
     position: fixed;
     left: 2em;
     top: 1em;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
     transition: all 0.2s ease;
 }
 
@@ -87,7 +132,6 @@ button:hover {
     left: 1.3em;
     top: 5em;
     font-size: 1.5rem;
-    color: var(--gray2);
 }
 
 .Header-Top input {
@@ -110,13 +154,15 @@ button:hover {
 .Header-Notes {
     border-top: 1px solid var(--gray);
     margin-top: 3em;
-    height: calc(100vh - 78px);
+    height: 100%;
     overflow-y: scroll;
 }
 
 .Header-Note {
+    height: 8em;
     padding: 2em;
     cursor: pointer;
+    margin: 1em;
 }
 
 .Header-Note-Title {
@@ -134,17 +180,53 @@ button:hover {
 
 .Header-Note small {
     display: block;
-    color: var(--gray2);
+}
+
+.Header-Note.active {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
 .Header-Note.active, 
 .Header-Note.active small {
-    background-color: var(--gray);
+    background-color: var(--gray2);
+    color: var(--gray);
+}
+
+.dark
+.Header-Note.active small {
+    background-color: var(--gray2);
+    color: var(--gray);
+}
+
+.light
+.Header-Note.active,
+.Header-Note.active small {
+    background-color: var(--gray2);
 }
 
 .Main {
     width: 70%;
     height: 100vh;
+}
+
+.Main input {
+    background: none;
+    border: 1px solid var(--gray);
+    border-radius: 0.2em;
+}
+
+.Main textarea {
+    background: none;
+    border: 1px solid var(--gray);
+    border-radius: 0.2em;
+}
+
+.dark .Main input {
+    color: var(--white);
+}
+
+.dark .Main textarea {
+    color: var(--white);
 }
 
 .Main-Edit, .Main-Note-Preview {
@@ -205,6 +287,7 @@ button:hover {
 .search input {
     margin-left: 2.3em;
     width: 18%;
+    background: none;
 }
 
 .Modal {
@@ -222,8 +305,20 @@ button:hover {
 .Modal h2 {
     margin: 0;
     font-size: 1.5rem;
-    color: var(--black);
     padding-bottom: 1em;
+}
+
+.dark .Modal {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+.dark .Modal button {
+    color: var(--white);
+}
+
+.dark .Modal a {
+    color: var(--white);
 }
 
 .Modal button {
