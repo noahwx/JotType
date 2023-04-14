@@ -152,9 +152,8 @@ button:hover {
 }
 
 .Header-Notes {
-    border-top: 1px solid var(--gray);
-    margin-top: 3em;
-    height: 100%;
+    margin-top: 2em;
+    height: 80%;
     overflow-y: scroll;
 }
 
@@ -242,6 +241,14 @@ button:hover {
     color: var(--gray2);
 }
 
+.dark .No-Active-Note {
+    color: var(--gray);
+}
+
+.light .No-Active-Note {
+    color: var(--gray4);
+}
+
 .Main-Edit {
     padding: 25px;
 }
@@ -300,6 +307,7 @@ button:hover {
     border-radius: 0.5em;
     height: 25vh;
     width: 25vw;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 } 
 
 .Modal h2 {
