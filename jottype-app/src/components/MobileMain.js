@@ -1,14 +1,13 @@
 import React from "react";
-import ReactMarkdown from "react-markdown";
 
 const MobileMain = ({ activeNote, onUpdateNote }) => {
-    const onEditField = (field, value) => {
-      onUpdateNote({
-        ...activeNote,
-        [field]: value,
-        lastModified: Date.now(),
-      });
-    };
+    // const onEditField = (field, value) => {
+    //   onUpdateNote({
+    //     ...activeNote,
+    //     [field]: value,
+    //     lastModified: Date.now(),
+    //   });
+    // };
   
     if (!activeNote) return <div className="No-Active-Note">Mobile Support Coming!</div>;
 

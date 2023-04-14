@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import logo from '../logo.svg';
 
 const MobileHeader = ({
     notes,
-    onAddNote,
-    onDeleteNote,
-    activeNote,
-    setActiveNote,
+    // onAddNote,
+    // onDeleteNote,
+    // activeNote,
+    // setActiveNote,
 }) => {
 
-    const sortedNotes = notes.sort((a, b) => b.lastModified - a.lastModified);
+    // const sortedNotes = notes.sort((a, b) => b.lastModified - a.lastModified);
 
-    const [search, setSearch] = useState("");
+    // const [search, setSearch] = useState("");
     
     return ( 
         <div className="MobileHeader">
