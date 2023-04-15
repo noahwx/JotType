@@ -32,6 +32,16 @@ const Main = ({
         setOpen(false)
       }
     }
+
+    const increaseFontSize = () => {
+      setFontSize(activeNote.fontSize + 1);
+      onEditField("fontSize", activeNote.fontSize + 1);
+    };
+
+    const decreaseFontSize = () => {
+      setFontSize(activeNote.fontSize - 1);
+      onEditField("fontSize", activeNote.fontSize - 1);
+    };
   
     document.addEventListener('mousedown',closeOpenMenus)
   
@@ -43,20 +53,14 @@ const Main = ({
           <div className="Main-Style-Edit">
             <label htmlFor="fontSize">Font Size: {activeNote.fontSize} px</label>
             <button 
-              onClick={() => {
-                setFontSize(activeNote.fontSize + 1);
-                onEditField("fontSize", activeNote.fontSize + 1);
-              }}
+              onClick={() => {increaseFontSize()}}
               value={activeNote.fontSize}
               max="24"
             >
               A+
             </button>
             <button
-              onClick={() => {
-                setFontSize(activeNote.fontSize - 1);
-                onEditField("fontSize", activeNote.fontSize - 1);
-              }}
+              onClick={() => {decreaseFontSize()}}
               value={activeNote.fontSize}
               min="12"
             >
