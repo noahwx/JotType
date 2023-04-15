@@ -232,7 +232,7 @@ button:hover {
     color: var(--white);
 }
 
-.dark .Main textarea[placeholder="Write your note here..."] {
+.dark .Main textarea {
     color: var(--white);
 }
 

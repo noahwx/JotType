@@ -48,7 +48,7 @@ const Header = ({
                         <div>Check out my site below.</div>
                         <a href="https://noahfontenette.com" target="_blank" rel="noreferrer">noahfontenette.com</a> &nbsp;
                         <a href="https://github.com/noahwx/JotType" target="_blank" rel="noreferrer">Jottype's Github</a>
-                        <p>Version 5.0.252</p>
+                        <p>Version 5.0.255</p>
                         <button onClick={closeModal}>close</button>
                     </ReactModal>
                     <button onClick={onAddNote} className='NewNote'>Create a New Note</button>

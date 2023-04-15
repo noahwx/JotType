@@ -21,7 +21,7 @@ const Note = () => {
 
     const [align, setAlign] = useState("left");
 
-    const [textColor, setTextColor] = useState("black");
+    const [textColor, setTextColor] = useState("inherit");
 
     useEffect(() => {
         localStorage.notes = JSON.stringify(notes);
