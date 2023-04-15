@@ -48,20 +48,22 @@ const Note = () => {
     };
 
     return ( 
-        <div className='Note'>
-            <Header 
-                notes={notes}
-                onAddNote={onAddNote}
-                onDeleteNote={onDeleteNote}
-                activeNote={activeNote}
-                setActiveNote={setActiveNote}
-                setNotes={setNotes}
-            />
-            <Main 
-                activeNote={getActiveNote()} 
-                onUpdateNote={onUpdateNote}
-            />
-        </div>
+        <>
+            <div className='Note'>
+                <Header 
+                    notes={notes}
+                    onAddNote={onAddNote}
+                    onDeleteNote={onDeleteNote}
+                    activeNote={activeNote}
+                    setActiveNote={setActiveNote}
+                    setNotes={setNotes}
+                />
+                <Main 
+                    activeNote={getActiveNote()} 
+                    onUpdateNote={onUpdateNote}
+                />
+            </div>
+        </>
      );
 }
  

@@ -3,9 +3,8 @@ import Note from './components/Note';
 import logo from './logo.svg';
 import Favicon from 'react-favicon';
 import './index.css';
-import MobileNote from './components/MobileNote';
 
-//Version 4.1.501
+//Version 4.2.000
 
 function App() {
 
@@ -30,7 +29,6 @@ function App() {
         <button onClick={toggleTheme} className='Themebtn'>Toggle Theme</button>
         <Favicon url={logo} />
         <Note toggleTheme={toggleTheme}/>
-        <MobileNote toggleTheme={toggleTheme}/>
       </div>
     </>
   );
