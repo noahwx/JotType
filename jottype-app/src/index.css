@@ -232,7 +232,11 @@ button:hover {
     color: var(--white);
 }
 
-.dark .Main textarea {
+.dark .Main textarea[placeholder="Write your note here..."] {
+    color: var(--white);
+}
+
+.dark .Main textarea::placeholder {
     color: var(--white);
 }
 
@@ -378,7 +382,7 @@ button:hover {
     position: absolute;
     width: 6em;
     height: 7em;
-    top: 1.5em;
+    top: 2em;
     left: 0.3em;
     text-align: left;
     background-color: var(--gray2);
@@ -386,10 +390,15 @@ button:hover {
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
+.dark .Dropdown-Item {
+    color: var(--black);
+}
+
 .Dropdown-Item {
     padding: 0.5em;
     cursor: pointer;
     list-style: none;
+    color: var(--black);
 }
 
 input[type="color"] {
@@ -397,6 +406,7 @@ input[type="color"] {
 	width: 2em;
 	height: 2em;
 	border: none;
+    color: var(--black);
 }
 
 .Main-Style-Edit {
@@ -409,5 +419,10 @@ input[type="color"] {
     height: 5%;
     width: 50%;
     border-radius: 0.2em;
-    background-color: var(--gray4);
+    background-color: var(--gray2);
+    color: var(--black);
+}
+
+.Main-Style-Edit button {
+    color: var(--black);
 }
