@@ -9,7 +9,19 @@ const Note = () => {
         localStorage.notes ? JSON.parse(localStorage.notes) : []
     );
 
+    const [fontSize, setFontSize] = useState(16);
+
+    const [bold, setBold] = useState(false);
+
+    const [italic, setItalic] = useState(false);
+
     const [activeNote, setActiveNote] = useState(false);
+
+    const [underline, setUnderline] = useState(false);
+
+    const [align, setAlign] = useState("left");
+
+    const [textColor, setTextColor] = useState("black");
 
     useEffect(() => {
         localStorage.notes = JSON.stringify(notes);
@@ -17,10 +29,16 @@ const Note = () => {
 
     const onAddNote = () => {
         const newNote = {
-          id: uuidv4(),
-          title: "Untitled Note",
-          body: "",
-          lastModified: Date.now(),
+            id: uuidv4(),
+            title: "Untitled Note",
+            body: "",
+            lastModified: Date.now(),
+            fontSize: fontSize,
+            bold: bold,
+            italic: italic,
+            underline: underline,
+            align: align,
+            textColor: textColor,
         };
     
         setNotes([newNote, ...notes]);
@@ -61,6 +79,18 @@ const Note = () => {
                 <Main 
                     activeNote={getActiveNote()} 
                     onUpdateNote={onUpdateNote}
+                    fontSize={fontSize}
+                    setFontSize={setFontSize}
+                    bold={bold}
+                    setBold={setBold}
+                    italic={italic}
+                    setItalic={setItalic}
+                    underline={underline}
+                    setUnderline={setUnderline}
+                    align={align}
+                    setAlign={setAlign}
+                    textColor={textColor}
+                    setTextColor={setTextColor}
                 />
             </div>
         </>

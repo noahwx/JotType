@@ -47,7 +47,8 @@ const Header = ({
                         <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Designed by Noah Fontenette</h2>
                         <div>Check out my site below.</div>
                         <a href="https://noahfontenette.com" target="_blank" rel="noreferrer">noahfontenette.com</a>
-                        <p>Version 4.1.501</p>
+                        <a href="https://github.com/noahwx/JotType" target="_blank" rel="noreferrer">Jottype's Github</a>
+                        <p>Version 5.0.000</p>
                         <button onClick={closeModal}>close</button>
                     </ReactModal>
                     <button onClick={onAddNote} className='NewNote'>Create a New Note</button>

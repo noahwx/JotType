@@ -269,7 +269,6 @@ button:hover {
   height: calc(50vh - 130px);
   padding: 10px;
   resize: none;
-  font-size: inherit;
   font-family: inherit;
 }
 
@@ -370,14 +369,45 @@ button:hover {
     font-size: 1rem;
 }
 
-.MobileNote {
-    display: none;
+.Dropdown {
+    position: relative;
+    display: inline-flex;
 }
 
-.MobileHeader {
-    display: none;
+.Dropdown-Menu {
+    position: absolute;
+    width: 6em;
+    height: 7em;
+    top: 1.5em;
+    left: 0.3em;
+    text-align: left;
+    background-color: var(--gray2);
+    border-radius: 0.2em;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
-.MobileApp {
-    display: none;
+.Dropdown-Item {
+    padding: 0.5em;
+    cursor: pointer;
+    list-style: none;
+}
+
+input[type="color"] {
+    display: inline-block;
+	width: 2em;
+	height: 2em;
+	border: none;
+}
+
+.Main-Style-Edit {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    align-items: center;
+    margin-top: 1em;
+    padding: 1em;
+    height: 5%;
+    width: 50%;
+    border-radius: 0.2em;
+    background-color: var(--gray4);
 }
