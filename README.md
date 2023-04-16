@@ -15,6 +15,7 @@
 ### 🔜 Account creation and use of a different way to store note data that will enable the use of cross device sharing of notes.
 ### 🔜 Ability to use tabs in the body of a note.
 ### 🔜 Use of a new color picker rather than the system color pickers.
+### 🔜 Full mobile support.
 
 ## My Info
 ### My website - https://noahfontenette.com
